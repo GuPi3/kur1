@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="kur.pageAdd">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout IsClippedToBounds="False">
+            <StackLayout>
+                <Frame CornerRadius="10">
+                <StackLayout>
+                    <Label Text="Наименование товара" VerticalOptions="CenterAndExpand" HorizontalOptions ="CenterAndExpand"/>
+                    <Entry x:Name="nameProduct"/>
+                </StackLayout>
+                </Frame>
+                <Frame CornerRadius="10">
+                <StackLayout>
+                    <Label Text="Цена товара" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                    <Entry x:Name="sum"/>
+                    <Label Text="Цена предоплаты" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                    <Entry x:Name="sumPrep"/>
+                    <Label Text="Цена установки" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                    <Entry x:Name="sumInst"/>
+                    <Label Text="Расходы" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                    <Entry x:Name="Expems"/>
+                </StackLayout>
+                </Frame>
+                <Frame CornerRadius="10">
+                <StackLayout>
+                        <Button Text="Добавить" Clicked="Button_Add" CornerRadius="10"/>
+                        <Button Text="Изменить" Clicked="Button_Change" CornerRadius="10"/>
+                        <Button Text="Удалить" Clicked="Button_Del" CornerRadius="10"/>
+                            <Button Text="Добавить расход" Clicked="Button_Add_Consumption" CornerRadius="10"/>
+                        </StackLayout>
+                </Frame>
+                <Frame CornerRadius="10" >
+                        <StackLayout>
+                            <ListView x:Name="listExpemses" ItemTapped="listExpemses_ItemTapped" HasUnevenRows="True">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout>
+                                        <StackLayout>
+                                            <Label Text="{Binding NameConsumption}" FontSize="18"/>
+                                            <Label Text="{Binding SumConsumption}" FontSize="18"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+                </Frame>
+                    
+                </StackLayout>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

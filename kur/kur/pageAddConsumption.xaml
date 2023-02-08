@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="kur.pageAddConsumption">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame CornerRadius="10">
+            <StackLayout>
+            <Label Text="Наименование товара" VerticalOptions="CenterAndExpand" HorizontalOptions ="CenterAndExpand"/>
+            <Entry x:Name="nameConsumptions"/>
+            <Label Text="Цена товара" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Entry x:Name="sumConsumptions"/>
+            </StackLayout>
+            </Frame>
+            <Frame CornerRadius="10">
+            <StackLayout>
+                    <Button Text="Добавить" Clicked="Add_Clicked" CornerRadius="10"/>
+                    <Button Text="Изменить" Clicked="Change_Clicked" CornerRadius="10"/>
+                    <Button Text="Удалить" Clicked="Del_Clicked" CornerRadius="10"/>
+            </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
